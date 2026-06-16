@@ -296,6 +296,20 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
+/* Enlarge project module text for readability */
+.project-module-text,
+.project-module-text p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .project-module-text,
+  .project-module-text p {
+    font-size: 18px;
+  }
+}
+
 .transition-out {
   opacity: 1;
   -webkit-animation: fade-out ease-out;
