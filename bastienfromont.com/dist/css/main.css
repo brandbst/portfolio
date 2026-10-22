@@ -318,3 +318,164 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
   animation-duration: 0.25s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
+
+.profile-resume {
+  box-sizing: border-box;
+  color: #666;
+  font-family: ftnk, sans-serif;
+  line-height: 1.45;
+  margin: 24px auto;
+  width: 95%; }
+
+.profile-resume *,
+.profile-resume *::before,
+.profile-resume *::after {
+  box-sizing: border-box; }
+
+.profile-resume__career {
+  background: rgba(238, 238, 238, 0.5);
+  border: 1px solid #bbb;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  padding: 24px;
+  position: relative; }
+
+.profile-resume__career::before {
+  background: #333;
+  bottom: 4%;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 10%;
+  width: 2px; }
+
+.profile-resume__career::after,
+.profile-resume__panel::after {
+  border-left: 15px solid transparent;
+  border-top: 15px solid #aaa;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.profile-resume__column h2,
+.profile-resume__panel h2 {
+  color: #c83232;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 0 0 20px; }
+
+.profile-resume__experience h2 {
+  color: #555;
+  text-align: center; }
+
+.profile-resume__entry {
+  font-size: 0.8rem;
+  margin-bottom: 22px;
+  position: relative; }
+
+.profile-resume__entry:last-child {
+  margin-bottom: 0; }
+
+.profile-resume__education .profile-resume__entry {
+  border-top: 1px solid #c83232;
+  padding: 8px 20px 14px 0; }
+
+.profile-resume__education .profile-resume__entry::after {
+  background: #d72d2d;
+  content: "";
+  height: 42px;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  width: 12px; }
+
+.profile-resume__experience .profile-resume__entry {
+  border-top: 1px solid #777;
+  padding: 8px 0 12px 20px;
+  text-align: right; }
+
+.profile-resume__experience .profile-resume__entry::before {
+  background: #666;
+  content: "";
+  height: 42px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 12px; }
+
+.profile-resume__entry h3,
+.profile-resume__skills h3 {
+  color: #444;
+  font-size: 0.9rem;
+  margin: 0 0 4px; }
+
+.profile-resume__education .profile-resume__entry h3 {
+  color: #c83232; }
+
+.profile-resume__entry p {
+  margin: 0; }
+
+.profile-resume__entry ul {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0; }
+
+.profile-resume__entry li {
+  margin-top: 3px; }
+
+.profile-resume__entry li::before {
+  content: "- "; }
+
+.profile-resume__note {
+  margin-top: 10px !important;
+  text-align: center; }
+
+.profile-resume__panel {
+  background: rgba(238, 238, 238, 0.5);
+  border: 1px solid #bbb;
+  margin-top: 24px;
+  padding: 20px 24px;
+  position: relative; }
+
+.profile-resume__skills {
+  display: grid;
+  gap: 12px 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.profile-resume__skill-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; }
+
+.profile-resume__skills p,
+.profile-resume__hobbies p {
+  margin: 0 0 10px; }
+
+.profile-resume__skills p {
+  font-size: 0.8rem; }
+
+.profile-resume__hobbies {
+  padding-left: 42px; }
+
+@media (max-width: 700px) {
+  .profile-resume__career {
+    grid-template-columns: 1fr;
+    padding: 20px; }
+  .profile-resume__experience {
+    border-top: 1px solid #bbb;
+    padding-top: 20px; }
+  .profile-resume__career::before {
+    display: none; }
+  .profile-resume__skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-resume__hobbies {
+    padding-left: 24px; } }
+
+@media (max-width: 420px) {
+  .profile-resume__skills {
+    grid-template-columns: 1fr; }
+  .profile-resume__panel,
+  .profile-resume__career {
+    padding: 16px; } }
