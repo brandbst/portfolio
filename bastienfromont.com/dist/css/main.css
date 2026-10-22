@@ -475,7 +475,63 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
 
 @media (max-width: 420px) {
   .profile-resume__skills {
-    grid-template-columns: 1fr; }
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .profile-resume__panel,
   .profile-resume__career {
     padding: 16px; } }
+
+@media (max-width: 540px) {
+  body .site-header {
+    box-sizing: border-box;
+    height: 76px;
+    min-height: 76px; }
+
+  body .logo-image img {
+    max-height: 48px; }
+
+  body .masthead {
+    background-size: 100% auto;
+    height: 30vw;
+    justify-content: center;
+    max-height: 165px;
+    min-height: 110px; }
+
+  body .masthead-contents {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
+
+  body .page-header.content {
+    padding-left: 16px;
+    padding-right: 16px; }
+
+  body .tree-child-wrapper > .project-module-image {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px; }
+
+  body .standard-modules .project-module-text p,
+  body .standard-modules .project-module-text p span,
+  body .standard-modules .project-module-text .rich-text div:not(.title):not(.sub-title):not(.caption),
+  body .standard-modules .project-module-text .rich-text div:not(.title):not(.sub-title):not(.caption) span {
+    font-size: 18px !important;
+    line-height: 1.6 !important; }
+
+  body .standard-modules .embed-dimensions {
+    max-width: 100% !important;
+    width: 100% !important; }
+
+  body .standard-modules .embed-content {
+    max-width: 100%; }
+
+  body .profile-resume__hobbies {
+    padding-left: 16px; }
+
+  body .profile-resume__entry {
+    font-size: 0.9rem; }
+}
+
+@media (max-width: 340px) {
+  body .profile-resume__skills {
+    grid-template-columns: 1fr; }
+}
