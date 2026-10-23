@@ -556,19 +556,17 @@ body .masthead--category .masthead-contents {
 }
 
 body .masthead--category .masthead-text {
-  align-items: center;
-  display: grid;
-  gap: 32px;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  min-height: 150px;
+  position: relative;
   width: 100%;
 }
 
 body .masthead--category .masthead-text h1 {
   color: #dedede;
   font-family: ftnk, sans-serif;
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-size: clamp(3rem, 7vw, 8rem);
   font-weight: 700;
-  line-height: 1;
+  line-height: 0.9;
   margin: 0;
   text-transform: uppercase;
 }
@@ -579,6 +577,11 @@ body .masthead--category .masthead-text p {
   font-size: 14px;
   line-height: 1.45;
   margin: 0;
+  position: absolute;
+  left: 43%;
+  top: 36%;
+  width: 52%;
+  z-index: 1;
 }
 
 body .masthead--identity {
@@ -590,7 +593,7 @@ body .masthead--identity {
 body .masthead--identity .masthead-contents {
   margin-left: auto;
   margin-right: auto;
-  max-width: 850px;
+  max-width: 1300px;
   width: 100%;
 }
 
@@ -603,10 +606,10 @@ body .masthead-text--identity .masthead-identity__backdrop {
   color: #e4e4e4;
   display: block;
   font-family: ftnk, sans-serif;
-  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-size: clamp(6rem, 16vw, 20rem);
   font-weight: 700;
   letter-spacing: -0.06em;
-  line-height: 0.95;
+  line-height: 0.8;
   text-align: center;
   text-transform: uppercase;
 }
@@ -614,10 +617,10 @@ body .masthead-text--identity .masthead-identity__backdrop {
 body .masthead-text--identity h1 {
   color: #d9232e;
   font-family: ftnk, sans-serif;
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(2rem, 6vw, 7rem);
   font-weight: 700;
   line-height: 1;
-  margin: -0.28em 0 0;
+  margin: -0.3em 0 0;
   padding-left: 5%;
   text-transform: uppercase;
 }
@@ -631,17 +634,20 @@ body .masthead-text--identity h1 {
   }
 
   body .masthead--category .masthead-text {
-    gap: 12px;
-    grid-template-columns: 1fr;
+    min-height: 0;
     text-align: center;
   }
 
   body .masthead--category .masthead-text h1 {
     font-size: clamp(1.75rem, 8vw, 2.5rem);
+    line-height: 1;
   }
 
   body .masthead--category .masthead-text p {
     font-size: 13px;
+    margin: 12px auto 0;
+    position: static;
+    width: 100%;
   }
 
   body .masthead--identity {
@@ -651,11 +657,11 @@ body .masthead-text--identity h1 {
   }
 
   body .masthead-text--identity .masthead-identity__backdrop {
-    font-size: clamp(3rem, 13vw, 4rem);
+    font-size: clamp(3.5rem, 16vw, 5rem);
   }
 
   body .masthead-text--identity h1 {
-    font-size: clamp(1.25rem, 6vw, 1.75rem);
+    font-size: clamp(1.5rem, 7vw, 2.25rem);
   }
 }
 
@@ -668,32 +674,23 @@ body .masthead-text--identity h1 {
   }
 
   body .masthead--category .masthead-text {
-    display: grid;
-    gap: 0;
-    grid-template-columns: 1fr;
+    min-height: 0;
     text-align: left;
-    flex-shrink: 0;
-    width: 115%;
   }
 
   body .masthead--category .masthead-text h1 {
-    font-size: clamp(2rem, 6vw, 4.5rem);
-    grid-column: 1;
-    grid-row: 1;
+    font-size: clamp(2.5rem, 7vw, 5rem);
     line-height: 0.9;
-    margin-left: -8px;
-    max-width: 66.666%;
     white-space: nowrap;
-    width: 66.666%;
   }
 
   body .masthead--category .masthead-text p {
-    font-size: clamp(6px, 0.85vw, 7px);
-    line-height: 0.9;
-    margin: -2em 0 0 46%;
-    position: relative;
-    width: 33.333%;
-    z-index: 1;
+    font-size: 10px;
+    left: 43%;
+    line-height: 1.2;
+    margin: 0;
+    top: 36%;
+    width: 52%;
   }
 }
 
