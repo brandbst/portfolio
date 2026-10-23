@@ -333,7 +333,7 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
   box-sizing: border-box; }
 
 .profile-resume__career {
-  background: rgba(238, 238, 238, 0.5);
+  background: rgba(238, 238, 238, 0.15);
   border: 1px solid #bbb;
   display: grid;
   gap: 24px;
@@ -592,7 +592,7 @@ body .masthead--category .masthead-text p {
   left: 43%;
   top: 36%;
   text-align: justify;
-  width: 52%;
+  width: 33.333%;
   z-index: 1;
 }
 
@@ -601,12 +601,18 @@ body .masthead--reconception .masthead-text h1 {
   text-align: left;
 }
 
+body .masthead--reconception .masthead-text {
+  --masthead-copy-anchor: clamp(303.02px, 44.191vw, 808.06px);
+  --masthead-copy-width: 45%;
+  transform: translateX(calc((76% - var(--masthead-copy-anchor) - var(--masthead-copy-width)) / 2));
+}
+
 body .masthead--reconception .masthead-text p {
-  left: 46%;
+  left: calc(12% + var(--masthead-copy-anchor));
   margin: 0;
   right: auto;
   top: 36%;
-  width: 42%;
+  width: var(--masthead-copy-width);
 }
 
 body .masthead--exploration .masthead-text h1 {
@@ -614,11 +620,17 @@ body .masthead--exploration .masthead-text h1 {
   text-align: left;
 }
 
+body .masthead--exploration .masthead-text {
+  --masthead-copy-anchor: clamp(260.21px, 37.947vw, 693.89px);
+  --masthead-copy-width: 45%;
+  transform: translateX(calc((76% - var(--masthead-copy-anchor) - var(--masthead-copy-width)) / 2));
+}
+
 body .masthead--exploration .masthead-text p {
-  left: 46%;
+  left: calc(12% + var(--masthead-copy-anchor));
   margin: 0;
   right: auto;
-  width: 42%;
+  width: var(--masthead-copy-width);
 }
 
 body .masthead--contemplation .masthead-text h1 {
@@ -628,19 +640,37 @@ body .masthead--contemplation .masthead-text h1 {
   white-space: nowrap;
 }
 
+body .masthead--contemplation .masthead-text {
+  --masthead-copy-anchor: clamp(260.04px, 37.9225vw, 693.44px);
+  --masthead-copy-width: 45%;
+  transform: translateX(calc((76% - var(--masthead-copy-anchor) - var(--masthead-copy-width)) / 2));
+}
+
 body .masthead--contemplation .masthead-text p {
-  left: 46%;
+  left: calc(12% + var(--masthead-copy-anchor));
   margin: 0;
   position: absolute;
   right: auto;
   top: 36%;
-  width: 42%;
+  width: var(--masthead-copy-width);
 }
 
 body .masthead--identity {
   height: clamp(170px, 25vw, 300px);
   min-height: 170px;
   padding: 24px 16px;
+}
+
+html.profile-page {
+  background-image: url("../../../cdn.myportfolio.com/9303f5c5-1f4c-4e4e-8660-3b5d6b9f7896/3aac1dff-f885-43ba-8595-8fc056fe41c1_rwc_0x0x2480x3501x40968743.png?h=81dc5b2277b291a17cd33849bc48e755");
+  background-position: center left;
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+body .masthead--identity + .site-wrap {
+  padding-top: 24px;
 }
 
 body .masthead--identity .masthead-contents {
@@ -690,6 +720,27 @@ body .masthead-text--identity h1 {
   position: absolute;
   text-align: left;
   text-transform: uppercase;
+}
+
+@media (max-width: 932px) {
+  html.profile-page {
+    background: none;
+  }
+
+  html.profile-page::after {
+    background-image: url("../../../cdn.myportfolio.com/9303f5c5-1f4c-4e4e-8660-3b5d6b9f7896/3aac1dff-f885-43ba-8595-8fc056fe41c1_rwc_0x0x2480x3501x40968743.png?h=81dc5b2277b291a17cd33849bc48e755");
+    background-position: center left;
+    background-repeat: repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
 
 .silicium-gallery {
@@ -858,6 +909,7 @@ body .masthead-text--identity h1 {
   body .masthead--category .masthead-text {
     min-height: 0;
     text-align: center;
+    transform: none;
   }
 
   body .masthead--category .masthead-text h1 {
@@ -972,8 +1024,35 @@ body .masthead-text--identity h1 {
     line-height: 1.2;
     margin: 0;
     top: 36%;
-    width: 52%;
+    width: 33.333%;
   }
+
+    body .masthead--reconception .masthead-text {
+      --masthead-copy-anchor: clamp(252.52px, 44.191vw, 505.04px);
+    }
+
+    body .masthead--exploration .masthead-text {
+      --masthead-copy-anchor: clamp(216.84px, 37.947vw, 433.68px);
+    }
+
+    body .masthead--contemplation .masthead-text {
+      --masthead-copy-anchor: clamp(216.7px, 37.9225vw, 433.4px);
+    }
+
+    body .masthead--reconception .masthead-text p {
+      left: calc(12% + var(--masthead-copy-anchor));
+      width: 45%;
+    }
+
+    body .masthead--exploration .masthead-text p {
+      left: calc(12% + var(--masthead-copy-anchor));
+      width: 45%;
+    }
+
+    body .masthead--contemplation .masthead-text p {
+      left: calc(12% + var(--masthead-copy-anchor));
+      width: 45%;
+    }
 
 }
 
@@ -1009,13 +1088,23 @@ body .jewelry-image-trio .e2e-site-project-module-image {
 }
 
 .contact-page .contact-card {
-  background: #f4f4f2;
-  border-top: 4px solid #f53a3a;
+  background: rgba(238, 238, 238, 0.15);
+  border: 1px solid #bbb;
   box-sizing: border-box;
   margin: 24px auto 64px;
   max-width: 1040px;
   padding: clamp(28px, 6vw, 64px);
+  position: relative;
   text-align: center;
+}
+
+.contact-page .contact-card::after {
+  border-left: 15px solid transparent;
+  border-top: 15px solid #aaa;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .contact-page .contact-card__eyebrow {
@@ -1074,6 +1163,17 @@ body .jewelry-image-trio .e2e-site-project-module-image {
 .contact-page .contact-card__link:not(.contact-card__link--primary) {
   background: transparent;
   color: #d9232e;
+}
+
+.contact-page .contact-card__link--primary {
+  background: transparent;
+  color: #d9232e;
+}
+
+.contact-page .contact-card__link--primary:hover,
+.contact-page .contact-card__link--primary:focus-visible {
+  background: #f53a3a;
+  color: #fff;
 }
 
 .contact-page .contact-card__link:not(.contact-card__link--primary):hover,
