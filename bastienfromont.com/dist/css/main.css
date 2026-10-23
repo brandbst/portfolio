@@ -584,6 +584,42 @@ body .masthead--category .masthead-text p {
   z-index: 1;
 }
 
+body .masthead--reconception .masthead-text h1 {
+  padding-left: 4%;
+  text-align: left;
+}
+
+body .masthead--reconception .masthead-text p {
+  left: 46%;
+  margin: 0;
+  right: auto;
+  width: 42%;
+}
+
+body .masthead--exploration .masthead-text h1 {
+  padding-left: 12%;
+  text-align: left;
+}
+
+body .masthead--exploration .masthead-text p {
+  left: 46%;
+  margin: 0;
+  right: auto;
+  width: 42%;
+}
+
+body .masthead--contemplation .masthead-text h1 {
+  padding-left: 12%;
+  text-align: left;
+}
+
+body .masthead--contemplation .masthead-text p {
+  left: 46%;
+  margin: 0;
+  right: auto;
+  width: 42%;
+}
+
 body .masthead--identity {
   height: clamp(170px, 25vw, 300px);
   min-height: 170px;
@@ -598,30 +634,44 @@ body .masthead--identity .masthead-contents {
 }
 
 body .masthead-text--identity {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
   position: relative;
-  width: 100%;
+  width: max-content;
+}
+
+body .masthead-text--identity .masthead-identity__backdrop {
+  white-space: nowrap;
+}
+
+body .masthead-text--identity .masthead-buttons {
+  display: none;
 }
 
 body .masthead-text--identity .masthead-identity__backdrop {
   color: #e4e4e4;
   display: block;
   font-family: ftnk, sans-serif;
-  font-size: clamp(6rem, 16vw, 20rem);
+  font-size: clamp(5.5rem, 14vw, 18rem);
   font-weight: 700;
-  letter-spacing: -0.06em;
+  letter-spacing: 0.02em;
   line-height: 0.8;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
 }
 
 body .masthead-text--identity h1 {
+  bottom: -0.46em;
   color: #d9232e;
   font-family: ftnk, sans-serif;
-  font-size: clamp(2rem, 6vw, 7rem);
+  font-size: clamp(1.8rem, 5vw, 6rem);
   font-weight: 700;
+  left: 0.35em;
   line-height: 1;
-  margin: -0.3em 0 0;
-  padding-left: 5%;
+  margin: 0;
+  position: absolute;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -643,6 +693,12 @@ body .masthead-text--identity h1 {
     line-height: 1;
   }
 
+  body .masthead--reconception .masthead-text h1,
+  body .masthead--exploration .masthead-text h1,
+  body .masthead--contemplation .masthead-text h1 {
+    padding-left: 0;
+  }
+
   body .masthead--category .masthead-text p {
     font-size: 13px;
     margin: 12px auto 0;
@@ -657,11 +713,11 @@ body .masthead-text--identity h1 {
   }
 
   body .masthead-text--identity .masthead-identity__backdrop {
-    font-size: clamp(3.5rem, 16vw, 5rem);
+    font-size: clamp(3rem, 14vw, 4.5rem);
   }
 
   body .masthead-text--identity h1 {
-    font-size: clamp(1.5rem, 7vw, 2.25rem);
+    font-size: clamp(1.3rem, 6vw, 2rem);
   }
 }
 
