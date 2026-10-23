@@ -574,7 +574,7 @@ body .masthead--category .masthead-text {
 }
 
 body .masthead--category .masthead-text h1 {
-  color: #dedede;
+  color: rgba(222, 222, 222, 0.5);
   font-family: ftnk, sans-serif;
   font-size: var(--masthead-title-size);
   font-weight: 700;
@@ -659,6 +659,18 @@ body .masthead--identity {
   padding: 24px 16px;
 }
 
+body .site-header .nav-container a:hover,
+body .site-header .nav-container a:focus-visible,
+body .responsive-nav .nav-container a:hover,
+body .responsive-nav .nav-container a:focus-visible {
+  color: #d9232e;
+}
+
+body .site-header .nav-container a.active,
+body .responsive-nav .nav-container a.active {
+  color: #d3d3d3;
+}
+
 html.profile-page {
   background-image: url("../../../cdn.myportfolio.com/9303f5c5-1f4c-4e4e-8660-3b5d6b9f7896/3aac1dff-f885-43ba-8595-8fc056fe41c1_rwc_0x0x2480x3501x40968743.png?h=81dc5b2277b291a17cd33849bc48e755");
   background-position: center left;
@@ -695,10 +707,10 @@ body .masthead-text--identity .masthead-buttons {
 }
 
 body .masthead-text--identity .masthead-identity__backdrop {
-  color: #e4e4e4;
+  color: rgba(228, 228, 228, 0.5);
   display: block;
   font-family: ftnk, sans-serif;
-  font-size: clamp(5.5rem, 14vw, 18rem);
+  font-size: clamp(5.5rem, calc(18vw - 50px), 14.5rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 0.8;
