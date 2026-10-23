@@ -712,6 +712,43 @@ body .masthead-text--identity h1 {
   height: auto;
 }
 
+.astrophoto-mosaic {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.astrophoto-mosaic > .project-module-image {
+  aspect-ratio: 3 / 2;
+  margin: 0;
+  min-width: 0;
+  padding: 0 !important;
+  width: 100%;
+}
+
+.astrophoto-mosaic > .project-module-image:nth-child(3n + 1) {
+  grid-column: 1 / -1;
+}
+
+.astrophoto-mosaic > .astrophoto-mosaic__featured {
+  grid-column: 1 / -1;
+}
+
+.astrophoto-mosaic > .project-module-image .js-lightbox {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.astrophoto-mosaic > .project-module-image .js-lightbox > img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  padding-bottom: 0 !important;
+  width: 100%;
+}
+
 .photographie-animaliere-mosaic {
   column-count: 3;
   column-gap: 12px;
@@ -866,6 +903,15 @@ body .masthead-text--identity h1 {
 
   .photographie-animaliere-mosaic .project-module-image {
     margin-bottom: 8px;
+  }
+
+  .astrophoto-mosaic {
+    gap: 8px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .astrophoto-mosaic > .project-module-image:nth-child(3n + 1) {
+    grid-column: auto;
   }
 
   .photographie-paysage-mosaic {
