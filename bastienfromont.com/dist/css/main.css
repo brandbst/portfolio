@@ -548,6 +548,17 @@ body .masthead--category {
   padding: 28px 24px;
 }
 
+body .masthead--contemplation {
+  align-items: flex-start;
+  min-height: 250px;
+}
+
+body .masthead--reconception {
+  align-items: flex-start;
+  margin-bottom: 0;
+  min-height: 250px;
+}
+
 body .masthead--category .masthead-contents {
   margin-left: auto;
   margin-right: auto;
@@ -580,6 +591,7 @@ body .masthead--category .masthead-text p {
   position: absolute;
   left: 43%;
   top: 36%;
+  text-align: justify;
   width: 52%;
   z-index: 1;
 }
@@ -593,7 +605,7 @@ body .masthead--reconception .masthead-text p {
   left: 46%;
   margin: 0;
   right: auto;
-  top: 42%;
+  top: 36%;
   width: 42%;
 }
 
@@ -610,19 +622,19 @@ body .masthead--exploration .masthead-text p {
 }
 
 body .masthead--contemplation .masthead-text h1 {
-  font-size: clamp(3rem, 6vw, 5rem);
-  padding-left: 6%;
+  font-size: clamp(3rem, 7vw, 8rem);
+  padding-left: 12%;
   text-align: left;
   white-space: nowrap;
 }
 
 body .masthead--contemplation .masthead-text p {
-  left: 34%;
+  left: 46%;
   margin: 0;
   position: absolute;
   right: auto;
   top: 36%;
-  width: 64%;
+  width: 42%;
 }
 
 body .masthead--identity {
@@ -939,6 +951,10 @@ body .masthead-text--identity h1 {
     padding: 12px 8px;
   }
 
+  body .masthead--contemplation {
+    min-height: 250px;
+  }
+
   body .masthead--category .masthead-text {
     min-height: 0;
     text-align: left;
@@ -948,10 +964,6 @@ body .masthead-text--identity h1 {
     font-size: clamp(2.5rem, 7vw, 5rem);
     line-height: 0.9;
     white-space: nowrap;
-  }
-
-  body .masthead--contemplation .masthead-text h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
   }
 
   body .masthead--category .masthead-text p {
@@ -994,4 +1006,210 @@ body .jewelry-image-trio .e2e-site-project-module-image {
   height: 100% !important;
   object-fit: cover;
   width: 100%;
+}
+
+.contact-page .contact-card {
+  background: #f4f4f2;
+  border-top: 4px solid #f53a3a;
+  box-sizing: border-box;
+  margin: 24px auto 64px;
+  max-width: 1040px;
+  padding: clamp(28px, 6vw, 64px);
+  text-align: center;
+}
+
+.contact-page .contact-card__eyebrow {
+  color: #f53a3a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.contact-page .contact-card h2 {
+  color: #222;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  margin: 0 auto 20px;
+}
+
+.contact-page .contact-card__intro {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+.contact-page .contact-card__links {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 32px;
+}
+
+.contact-page .contact-card__link {
+  background: #f53a3a;
+  border: 2px solid #f53a3a;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 108px;
+  padding: 18px;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+  width: 100%;
+}
+
+.contact-page .contact-card__link:hover,
+.contact-page .contact-card__link:focus-visible {
+  background: transparent;
+  color: #d9232e;
+}
+
+.contact-page .contact-card__link:not(.contact-card__link--primary) {
+  background: transparent;
+  color: #d9232e;
+}
+
+.contact-page .contact-card__link:not(.contact-card__link--primary):hover,
+.contact-page .contact-card__link:not(.contact-card__link--primary):focus-visible {
+  background: #f53a3a;
+  color: #fff;
+}
+
+.contact-page .contact-card__link-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.contact-page .contact-card__link-detail {
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+}
+
+.contact-page .contact-card__link--primary .contact-card__link-title {
+  font-size: 1rem;
+}
+
+.contact-page .contact-card__link--primary .contact-card__link-detail {
+  cursor: text;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+@media (max-width: 540px) {
+  .contact-page .contact-card {
+    margin: 12px 16px 40px;
+    padding: 32px 22px;
+  }
+
+  .contact-page .contact-card__links {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 541px) and (max-width: 760px) {
+  .contact-page .contact-card__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.boutique-page .shop-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 24px auto 64px;
+  max-width: 1120px;
+  padding: 0 20px;
+}
+
+.boutique-page .shop-card {
+  background: #f4f4f2;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.boutique-page .shop-card__image {
+  aspect-ratio: 4 / 3;
+  display: block;
+  overflow: hidden;
+}
+
+.boutique-page .shop-card__image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease;
+  width: 100%;
+}
+
+.boutique-page .shop-card__image:hover img,
+.boutique-page .shop-card__image:focus-visible img {
+  transform: scale(1.03);
+}
+
+.boutique-page .shop-card__content {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.boutique-page .shop-card h2 {
+  color: #222;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.boutique-page .shop-card__price {
+  color: #555;
+  font-size: 1rem;
+  margin: 12px 0 20px;
+}
+
+.boutique-page .shop-card__button {
+  background: #f53a3a;
+  border: 2px solid #f53a3a;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.85rem;
+  font-weight: 700;
+  justify-content: center;
+  margin-top: auto;
+  max-width: 100%;
+  padding: 13px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+  width: 100%;
+}
+
+.boutique-page .shop-card__button:hover,
+.boutique-page .shop-card__button:focus-visible {
+  background: transparent;
+  color: #d9232e;
+}
+
+@media (max-width: 540px) {
+  .boutique-page .shop-grid {
+    gap: 16px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 16px;
+  }
+
+  .boutique-page .shop-card__content {
+    padding: 18px;
+  }
 }
