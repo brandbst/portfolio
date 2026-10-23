@@ -75,11 +75,14 @@
                 <div id="project-canvas" class="js-project-modules modules content">
                   <div id="project-modules">
                     <div class="fontaine-pdf-wrap">
-                      <iframe
-                        class="fontaine-pdf"
-                        src="../cdn.myportfolio.com/de%20la%20fontaine%20au%20quelque%20part/LIVRET%20V2.pdf#view=FitH"
-                        title="Lecteur PDF : De la fontaine au quelque part"
-                      ></iframe>
+                      <div class="fontaine-pdf-reader" data-pdf-src="../cdn.myportfolio.com/de%20la%20fontaine%20au%20quelque%20part/LIVRET%20V2.pdf">
+                        <div class="fontaine-pdf-controls" aria-label="Commandes du lecteur PDF">
+                          <button class="fontaine-pdf-previous" type="button" disabled>Pages précédentes</button>
+                          <span class="fontaine-pdf-status" role="status" aria-live="polite">Chargement du livret…</span>
+                          <button class="fontaine-pdf-next" type="button" disabled>Pages suivantes</button>
+                        </div>
+                        <div class="fontaine-pdf-spread" aria-label="Pages du livret"></div>
+                      </div>
                       <p class="fontaine-pdf-fallback">
                         Le lecteur PDF ne s’affiche pas ?
                         <a href="../cdn.myportfolio.com/de%20la%20fontaine%20au%20quelque%20part/LIVRET%20V2.pdf" target="_blank" rel="noopener">Ouvrir le livret dans un nouvel onglet</a>.
@@ -123,6 +126,7 @@
   <script type="text/javascript">var __config__ = {"page_id":"de-la-fontaine-au-quelque-part","theme":{"name":"marta/ludwig"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false},"googleAnalytics":{"trackingCode":"G-5YNCHZFX81","anonymization":false}};</script>
   <script type="text/javascript" src="site/translations7b90?cb=ea5c7bdea1f3e9b04b7e3175ce9aa3fd2a8d5931"></script>
   <script type="text/javascript" src="dist/js/main7b90.js?cb=ea5c7bdea1f3e9b04b7e3175ce9aa3fd2a8d5931"></script>
+  <script type="module" src="dist/js/fontaine-pdf-reader.js"></script>
 </body>
 
 </html>

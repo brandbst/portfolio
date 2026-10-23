@@ -1435,14 +1435,50 @@ body .jewelry-image-trio .e2e-site-project-module-image {
   width: 100%;
 }
 
-.fontaine-pdf {
+.fontaine-pdf-reader {
   background: #f4f4f4;
-  border: 0;
-  display: block;
-  height: 82vh;
+}
+
+.fontaine-pdf-controls {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 12px;
+}
+
+.fontaine-pdf-controls button {
+  font: inherit;
+}
+
+.fontaine-pdf-controls button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.fontaine-pdf-status {
+  text-align: center;
+}
+
+.fontaine-pdf-spread {
+  align-items: start;
+  box-sizing: border-box;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: stretch;
   min-height: 600px;
-  max-height: 1100px;
-  width: 100%;
+  overflow: auto;
+  padding: 16px;
+}
+
+.fontaine-pdf-spread canvas {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.16);
+  display: block;
+  height: auto !important;
+  max-width: 100%;
+  width: 100% !important;
 }
 
 .fontaine-pdf-fallback {
@@ -1450,9 +1486,15 @@ body .jewelry-image-trio .e2e-site-project-module-image {
   text-align: center;
 }
 
-@media (max-width: 540px) {
-  .fontaine-pdf {
-    height: 72vh;
+@media (max-width: 700px) {
+  .fontaine-pdf-controls {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .fontaine-pdf-spread {
+    grid-template-columns: minmax(0, 1fr);
     min-height: 440px;
+    padding: 8px;
   }
 }
