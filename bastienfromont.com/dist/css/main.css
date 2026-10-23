@@ -567,6 +567,7 @@ body .masthead--category .masthead-contents {
 }
 
 body .masthead--category .masthead-text {
+  --masthead-title-size: clamp(3rem, 7vw, 8rem);
   min-height: 150px;
   position: relative;
   width: 100%;
@@ -575,7 +576,7 @@ body .masthead--category .masthead-text {
 body .masthead--category .masthead-text h1 {
   color: #dedede;
   font-family: ftnk, sans-serif;
-  font-size: clamp(3rem, 7vw, 8rem);
+  font-size: var(--masthead-title-size);
   font-weight: 700;
   line-height: 0.9;
   margin: 0;
@@ -590,7 +591,7 @@ body .masthead--category .masthead-text p {
   margin: 0;
   position: absolute;
   left: 43%;
-  top: 36%;
+  top: calc(var(--masthead-title-size) * 0.675);
   text-align: justify;
   width: 33.333%;
   z-index: 1;
@@ -611,7 +612,6 @@ body .masthead--reconception .masthead-text p {
   left: calc(12% + var(--masthead-copy-anchor));
   margin: 0;
   right: auto;
-  top: 36%;
   width: var(--masthead-copy-width);
 }
 
@@ -634,7 +634,6 @@ body .masthead--exploration .masthead-text p {
 }
 
 body .masthead--contemplation .masthead-text h1 {
-  font-size: clamp(3rem, 7vw, 8rem);
   padding-left: 12%;
   text-align: left;
   white-space: nowrap;
@@ -651,7 +650,6 @@ body .masthead--contemplation .masthead-text p {
   margin: 0;
   position: absolute;
   right: auto;
-  top: 36%;
   width: var(--masthead-copy-width);
 }
 
@@ -1013,7 +1011,7 @@ body .masthead-text--identity h1 {
   }
 
   body .masthead--category .masthead-text h1 {
-    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-size: var(--masthead-title-size);
     line-height: 0.9;
     white-space: nowrap;
   }
@@ -1023,8 +1021,12 @@ body .masthead-text--identity h1 {
     left: 43%;
     line-height: 1.2;
     margin: 0;
-    top: 36%;
+    top: calc(var(--masthead-title-size) * 0.675);
     width: 33.333%;
+  }
+
+  body .masthead--category .masthead-text {
+    --masthead-title-size: clamp(2.5rem, 7vw, 5rem);
   }
 
     body .masthead--reconception .masthead-text {
