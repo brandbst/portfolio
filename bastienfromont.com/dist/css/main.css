@@ -696,3 +696,34 @@ body .masthead-text--identity h1 {
     z-index: 1;
   }
 }
+
+body .jewelry-image-pair,
+body .jewelry-image-trio {
+  display: grid;
+  gap: 8px;
+}
+
+body .jewelry-image-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body .jewelry-image-trio {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body .jewelry-image-pair .project-module,
+body .jewelry-image-trio .project-module {
+  min-width: 0;
+}
+
+body .jewelry-image-trio .js-lightbox {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+body .jewelry-image-trio .e2e-site-project-module-image {
+  display: block;
+  height: 100% !important;
+  object-fit: cover;
+  width: 100%;
+}
