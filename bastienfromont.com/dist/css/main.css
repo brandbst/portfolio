@@ -548,6 +548,10 @@ body .masthead--category {
   padding: 28px 24px;
 }
 
+body .masthead--exploration {
+  min-height: 260px;
+}
+
 body .masthead--contemplation {
   align-items: flex-start;
   min-height: 250px;
@@ -916,6 +920,10 @@ body .masthead-text--identity h1 {
     padding: 24px 16px;
   }
 
+  body .masthead--exploration {
+    min-height: 230px;
+  }
+
   body .masthead--category .masthead-text {
     min-height: 0;
     text-align: center;
@@ -1011,6 +1019,10 @@ body .masthead-text--identity h1 {
     max-height: none !important;
     min-height: 140px;
     padding: 12px 8px;
+  }
+
+  body .masthead--exploration {
+    min-height: 200px;
   }
 
   body .masthead--contemplation {
