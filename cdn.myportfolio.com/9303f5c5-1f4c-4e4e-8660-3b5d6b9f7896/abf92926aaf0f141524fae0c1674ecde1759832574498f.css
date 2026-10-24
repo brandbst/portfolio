@@ -104,6 +104,10 @@ b,
 strong {
   font-weight: bold; }
 
+redstrong {
+  font-weight: bold;
+  color: #af5a5a; }
+
 /**
    * Address styling not present in Safari and Chrome.
    */
