@@ -364,7 +364,8 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
   color: #c83232;
   font-size: 1.2rem;
   line-height: 1.2;
-  margin: 0 0 20px; }
+  margin: 0 0 20px;
+text-align: center; }
 
 .profile-resume__experience h2 {
   color: #555;
@@ -390,6 +391,20 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
   right: 0;
   top: -1px;
   width: 12px; }
+
+  .profile-resume__education .profile-resume__entry_long {
+  border-top: 1px solid #c83232;
+  padding: 8px 20px 14px 0; }
+
+.profile-resume__education .profile-resume__entry_long::after {
+  background: #d72d2d;
+  content: "";
+  height: 180px;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  width: 12px; }
+  
 
 .profile-resume__experience .profile-resume__entry {
   border-top: 1px solid #777;
@@ -433,7 +448,7 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
   text-align: center; }
 
 .profile-resume__panel {
-  background: rgba(238, 238, 238, 0.5);
+  background: rgba(238, 238, 238, 0.15);
   border: 1px solid #bbb;
   margin-top: 24px;
   padding: 20px 24px;
